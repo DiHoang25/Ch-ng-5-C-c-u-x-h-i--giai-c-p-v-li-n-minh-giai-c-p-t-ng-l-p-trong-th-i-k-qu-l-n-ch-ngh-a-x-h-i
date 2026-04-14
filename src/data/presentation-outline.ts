@@ -35,7 +35,7 @@ export const speakerSegments: SpeakerSegment[] = [
           "Công nhân cần nông dân để bảo đảm lương thực; nông dân cần công nhân để có máy móc và tổ chức sản xuất. Do đó, đây vừa là liên minh chính trị vừa là liên minh kinh tế."
       },
       {
-        title: "Kết luận cần nhấn mạnh",
+        title: "Kết luận",
         body:
           "Giá trị cốt lõi của tư tưởng Lênin nằm ở phương pháp tập hợp lực lượng phù hợp với mục tiêu lịch sử cụ thể, không phải sao chép mô hình cứng nhắc cho mọi thời đại."
       }
@@ -64,7 +64,7 @@ export const speakerSegments: SpeakerSegment[] = [
           "Doanh nhân tổ chức nguồn lực, vốn và thị trường; thanh niên, lao động trẻ tiếp thu nhanh công nghệ mới. Hai lực lượng này tạo động lực tăng trưởng và chuyển đổi trong kỷ nguyên số."
       },
       {
-        title: "Kết luận cần chốt",
+        title: "Kết luận",
         body:
           "Liên minh hiện nay không phải là ghép thêm thành phần cho đủ, mà là cơ chế phối hợp lợi ích giữa các lực lượng xã hội để cùng hướng tới phát triển nhanh, bền vững, bao trùm và tự chủ."
       }
