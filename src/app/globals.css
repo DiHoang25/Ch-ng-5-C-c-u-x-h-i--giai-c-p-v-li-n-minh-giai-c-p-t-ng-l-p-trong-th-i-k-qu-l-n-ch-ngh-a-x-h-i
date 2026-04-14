@@ -3,31 +3,145 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --class-worker: #38bdf8;
+  --class-farmer: #4ade80;
+  --class-intellectual: #f59e0b;
+  --class-entrepreneur: #fb7185;
+  --duration-soft: 320ms;
+  --duration-slow: 900ms;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  color: #e2e8f0;
+  background:
+    radial-gradient(circle at 18% 15%, rgba(56, 189, 248, 0.13), transparent 34%),
+    radial-gradient(circle at 78% 8%, rgba(20, 184, 166, 0.12), transparent 32%),
+    radial-gradient(circle at 50% 88%, rgba(234, 179, 8, 0.1), transparent 36%),
+    linear-gradient(140deg, #020617 0%, #0b1120 38%, #031525 100%);
+  font-family: var(--font-body), sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+button,
+a,
+[role="button"] {
+  transition: transform var(--duration-soft) ease, box-shadow var(--duration-soft) ease,
+    background-color var(--duration-soft) ease, opacity var(--duration-soft) ease;
+}
+
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid rgba(110, 231, 183, 0.95);
+  outline-offset: 2px;
+}
+
+.video-frame {
+  position: relative;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 1rem;
+  padding: 0.75rem;
+  background:
+    linear-gradient(130deg, rgba(15, 23, 42, 0.82), rgba(6, 78, 59, 0.2)),
+    radial-gradient(circle at 10% 5%, rgba(56, 189, 248, 0.2), transparent 40%);
+}
+
+.video-frame::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 1rem;
+  padding: 1px;
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0.6), rgba(251, 191, 36, 0.45));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.book-flip-card {
+  perspective: 1200px;
+  min-height: 280px;
+}
+
+.book-flip-inner {
+  position: relative;
+  height: 100%;
+  min-height: 280px;
+  transform-style: preserve-3d;
+  transition: transform var(--duration-slow) ease;
+}
+
+.book-flip-card:hover .book-flip-inner,
+.book-flip-card:focus-within .book-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.book-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: linear-gradient(150deg, rgba(15, 23, 42, 0.88), rgba(30, 41, 59, 0.8));
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.book-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(150deg, rgba(6, 95, 70, 0.35), rgba(15, 23, 42, 0.92));
+}
+
+.particle {
+  position: absolute;
+  bottom: -40px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(186, 230, 253, 0.8) 0%, rgba(125, 211, 252, 0) 75%);
+  animation-name: float-particle;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.7);
+    opacity: 0;
+  }
+
+  18% {
+    opacity: 0.55;
+  }
+
+  82% {
+    opacity: 0.45;
+  }
+
+  100% {
+    transform: translate3d(0, -112vh, 0) scale(1.25);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .book-flip-card:hover .book-flip-inner,
+  .book-flip-card:focus-within .book-flip-inner {
+    transform: none;
   }
 }
