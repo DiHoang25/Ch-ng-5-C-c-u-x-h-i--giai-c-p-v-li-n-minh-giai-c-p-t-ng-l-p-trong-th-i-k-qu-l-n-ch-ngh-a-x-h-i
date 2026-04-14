@@ -85,7 +85,7 @@ export const speakerSegments: SpeakerSegment[] = [
       {
         title: "Phương hướng cơ bản",
         body:
-          "Tăng cường liên minh giai cấp - tầng lớp phải gắn với công nghiệp hóa, hiện đại hóa, chuyển đổi số, hoàn thiện thể chế kinh tế thị trường định hướng xã hội chủ nghĩa và bảo đảm an sinh xã hội."
+          "Thứ nhất: Phải đẩy mạnh công nghiệp hóa, nhưng phải gắn liền với kinh tế tri thức và chuyển đổi số. Đây là xu hướng tất yếu. Thứ hai: Cần một môi trường công bằng thông qua việc hoàn thiện thể chế kinh tế thị trường. Có như vậy, các giai cấp như doanh nhân hay trí thức mới phát huy hết khả năng của mình. Thứ ba: Phát triển kinh tế nhưng không được quên con người. Phải đảm bảo hài hòa lợi ích và thực hiện tốt an sinh xã hội."
       },
       {
         title: "Vai trò sinh viên sắp đi làm",
