@@ -93,7 +93,7 @@ export const speakerSegments: SpeakerSegment[] = [
           "Sinh viên là lực lượng lao động sáng tạo, là cầu nối tri thức giữa giảng đường và thực tiễn sản xuất, đồng thời là công dân có trách nhiệm trong việc xây dựng đồng thuận xã hội và kỷ cương nghề nghiệp."
       },
       {
-        title: "Câu kết nên dùng",
+        title: "Kết Luận",
         body:
           "Một tư tưởng mạnh không cũ đi; nó được làm mới để phù hợp thời đại. Với Việt Nam hiện nay, cách phù hợp là giữ nguyên lý đoàn kết lực lượng và vận dụng sáng tạo theo điều kiện lịch sử mới."
       }
